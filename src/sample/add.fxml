@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onKeyPressed="#keyHit" prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddData">
+   <children>
+      <Label layoutX="71.0" layoutY="81.0" prefHeight="20.0" prefWidth="21.0" text="UID" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="100.0" />
+      <Label layoutX="56.0" layoutY="147.0" prefHeight="20.0" prefWidth="53.0" text="Book Title" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="170.0" />
+      <Label layoutX="80.0" layoutY="180.0" prefHeight="20.0" prefWidth="80.0" text="Author Name:" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="240.0" />
+      <TextField fx:id="uidField" layoutX="225.0" layoutY="98.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.rightAnchor="70.0" />
+      <TextField fx:id="titleField" layoutX="180.0" layoutY="168.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.rightAnchor="70.0" />
+      <TextField fx:id="authorField" layoutX="180.0" layoutY="238.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.rightAnchor="70.0" />
+      <JFXButton fx:id="addButton" layoutX="110.0" layoutY="328.0" onAction="#addBook" prefHeight="30.0" prefWidth="65.0" ripplerFill="#027ec6" style="-fx-background-color: #1296ee;" text="Add" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="315.0" />
+      <JFXButton fx:id="cancelButton" layoutX="155.0" layoutY="338.0" onAction="#cancelAdd" prefHeight="30.0" prefWidth="65.0" ripplerFill="#027ec6" style="-fx-background-color: #1296ee;" text="Cancel" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="315.0" />
+      <Label fx:id="uidErrorMessage" layoutX="180.0" layoutY="123.0" prefHeight="17.0" prefWidth="200.0" textFill="#cd0404" visible="false" AnchorPane.topAnchor="125.0">
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </Label>
+      <Label fx:id="titleRequired" layoutX="180.0" layoutY="192.0" prefHeight="17.0" prefWidth="200.0" text="Please enter a book title" textFill="#cd0404" visible="false" AnchorPane.topAnchor="195.0">
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </Label>
+      <Label layoutX="88.0" layoutY="102.0" text="*" textFill="RED" AnchorPane.leftAnchor="91.0" />
+      <Label layoutX="123.0" layoutY="172.0" prefHeight="17.0" prefWidth="0.0" text="*" textFill="RED" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="170.0" />
+   </children>
+</AnchorPane>
